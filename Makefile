@@ -6,7 +6,7 @@
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 14:13:04 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/11 16:37:03 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/11 17:37:36 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Werror -Wall -Wextra
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-	ft_atoi.c ft_strlen.c ft_strncmp.c ft_tolower.c ft_toupper.c
+	ft_strlen.c ft_strchr.c ft_strncmp.c ft_tolower.c ft_toupper.c ft_atoi.c
 OBJ = $(SRC:.c=.o)
 INC = libft.h
 RM = rm -f
