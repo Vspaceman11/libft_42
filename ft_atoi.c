@@ -6,11 +6,11 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 14:42:46 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/10 17:38:33 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:14:35 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	ft_cast_to_int(char *str, int i)
+static	int	ft_cast_to_int(const char *str, int i)
 {
 	int	result;
 
