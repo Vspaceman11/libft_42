@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:08:53 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/11 14:32:03 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/12 17:07:46 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while ((i < n - 1) && (s1[i] != '\0' && s2[i] != '\0'))
 	{
 		if (!(s1[i] == s2[i]))
 		{
@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 // int main(void)
 // {
