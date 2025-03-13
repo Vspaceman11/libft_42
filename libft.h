@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:11:51 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/12 17:58:43 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:12:20 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_atoi(const char *str);
 
 #endif
