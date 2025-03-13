@@ -6,11 +6,10 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:32:22 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/12 15:56:01 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:53:28 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 // #include <stdio.h>
 
