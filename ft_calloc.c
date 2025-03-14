@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:41:43 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/13 16:13:57 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:57:17 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*p;
 
 	i = 0;
-	p = (unsigned char *)malloc(count * size);
+	p = malloc(count * size);
 	if (p == NULL)
 		return (NULL);
-	while (i < count)
+	while (i < count * size)
 	{
 		p[i] = 0;
 		i++;

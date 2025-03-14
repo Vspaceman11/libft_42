@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 12:03:39 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/12 14:41:16 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:58:34 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return ((char *)&haystack[i]);
+				return ((char *)haystack + i);
 			}
 			j++;
 		}
 		i++;
+		j = 0;
 	}
 	return (0);
 }
