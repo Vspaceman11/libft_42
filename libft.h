@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:11:51 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/13 17:08:21 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/14 14:43:54 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
