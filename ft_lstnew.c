@@ -6,12 +6,12 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 15:18:26 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/18 16:24:18 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/18 16:28:37 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
