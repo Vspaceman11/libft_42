@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:11:51 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/17 17:44:23 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/18 14:15:29 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
