@@ -6,13 +6,24 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:42:38 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/14 18:03:33 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:26:48 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
+/**
+ * @brief Applies a function to each character of a string.
+ *
+ * This function creates a new string by applying the function @p f
+ * to each character of the string @p s, passing its index and value.
+ * The resulting string is returned.
+ *
+ * @param s The string to iterate over.
+ * @param f The function to apply to each character of @p s.
+ *
+ * @return A new string with the modified characters.
+ * Returns NULL if memory allocation fails or if either @p s or @p f is NULL.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;

@@ -6,14 +6,25 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 12:37:21 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/13 13:31:15 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:05:56 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
-
+/**
+ * @brief Fills a memory area with a constant byte value.
+ *
+ * This function fills the first @p len bytes of the memory area pointed to
+ * by @p b with the constant byte value @p c. It treats @p b as a pointer to
+ * an unsigned char and sets each byte to the specified value. The function
+ * returns a pointer to the memory area @p b.
+ *
+ * @param b Pointer to the memory area to be filled.
+ * @param c The value to set, interpreted as an unsigned char.
+ * @param len The number of bytes to set.
+ *
+ * @return A pointer to the memory area @p b.
+ */
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;
@@ -28,16 +39,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return ((void *)b);
 }
-// int main() {
-// 	char buffer1[20] = "Hello, world!";
-// 	char buffer2[20] = "Hello, world!";
-
-// 	//My ft_memset
-// 	ft_memset(buffer2, '*', 5);
-// 	printf("My ft_memset: %s\n", buffer2);
-
-// 	//Original memset
-// 	memset(buffer1, '*', 5);
-// 	printf("Original memset: %s\n", buffer1);
-// 	return (0);
-// }

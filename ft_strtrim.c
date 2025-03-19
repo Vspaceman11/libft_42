@@ -6,14 +6,27 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 13:11:44 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/18 14:44:30 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:31:43 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_newstr(int size);
+/**
+ * @brief Trims the characters from the start and end of the string @p s1
+ * 			that are present in the set @p set.
+ *
+ * This function removes all leading and trailing characters in @p s1 that
+ * are present in @p set. The function returns a new string with the trimmed
+ * content. If any of the input strings are NULL, the function returns NULL.
+ *
+ * @param s1 The string to trim.
+ * @param set The set of characters to remove from the start and end of @p s1.
+ *
+ * @return A new string with the trimmed content, or NULL if allocation fails
+ * 			or any of the input strings is NULL.
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -43,6 +56,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[i] = '\0';
 	return (result);
 }
+/**
+ * @brief Allocates memory for a new string with the given size.
+ *
+ * This function allocates memory for a new string of the specified size and
+ * returns a pointer to the newly allocated memory. If the allocation fails,
+ * it returns NULL.
+ *
+ * @param size The size of the new string.
+ *
+ * @return A pointer to the newly allocated string, or NULL if allocation fails.
+ */
 
 static char	*ft_newstr(int size)
 {
@@ -53,15 +77,3 @@ static char	*ft_newstr(int size)
 		return (NULL);
 	return (newstr);
 }
-// int	main(void)
-// {
-// 	char *s1 = "//Hello, World!//";
-// 	char *set = "//";
-// 	char *result = ft_strtrim(s1, set);
-
-// 	printf("Before: \"%s\"\n", s1);
-// 	printf("After:  \"%s\"\n", result);
-
-// 	free(result);
-// 	return (0);
-// }

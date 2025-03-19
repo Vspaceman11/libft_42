@@ -6,14 +6,27 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 16:44:32 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/17 19:30:59 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:56:36 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	len_count(int n);
+/**
+ * @brief Converts an integer to a string.
+ *
+ * This function converts a given integer
+ *  to its corresponding string representation.
+ * It handles both positive and negative integers,
+ *  as well as the special case of zero.
+ *
+ * @param n The integer to convert.
+ *
+ * @return A pointer to the newly allocated string
+ *  containing the integer representation.
+ *			Returns NULL if memory allocation fails.
+ */
 
 char	*ft_itoa(int n)
 {
@@ -42,6 +55,18 @@ char	*ft_itoa(int n)
 	return (result_str);
 }
 
+/**
+ * @brief Calculates the number of digits in an integer.
+ *
+ * This function calculates the number of digits in the given integer.
+ * It takes into account the sign of the number and
+ *  returns the length of its string representation.
+ *
+ * @param n The integer whose digit count is to be determined.
+ *
+ * @return The number of digits in the integer,
+ *  including space for a potential sign.
+ */
 static int	len_count(int n)
 {
 	int	len;
@@ -58,15 +83,3 @@ static int	len_count(int n)
 	}
 	return (len);
 }
-// int	main()
-// {
-//     int test_values[] = {0, 1, 42, -42, 2147483647, -2147483648};
-//     for (int i = 0; i < 6; i++)
-//     {
-//         char *res = ft_itoa(test_values[i]);
-//         printf("ft_itoa(%d) = \"%s\"\n", test_values[i], res);
-//         free(res);
-//     }
-// 	// printf("%s", ft_itoa(2147483647));
-//     // return 0;
-// }
