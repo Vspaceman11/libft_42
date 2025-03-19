@@ -6,10 +6,11 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 13:24:35 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/19 13:35:50 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:39:30 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /**
  * @brief Deletes a single element from the linked list.
  *
@@ -21,8 +22,6 @@
  *
  * @return void
  */
-#include "libft.h"
-
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
