@@ -6,15 +6,27 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:02:27 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/12 14:16:40 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:25:00 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <unistd.h>
-// #include <stdio.h>
-// #include <string.h>
-
+/**
+ * @brief Concatenates two strings with a size limit.
+ *
+ * This function appends the @p src string to the end of the @p dst string
+ * while ensuring that the total length of @p dst does not exceed @p dstsize
+ * characters. The resulting string is null-terminated. If @p dstsize is less
+ * than or equal to the length of @p dst, the function returns @p dstsize +
+ * the length of @p src.
+ *
+ * @param dst The destination string to which @p src will be appended.
+ * @param src The source string to append to @p dst.
+ * @param dstsize The size of the destination buffer.
+ *
+ * @return The total length of the string it tried to create (i.e., the initial
+ * 			length of @p dst plus the length of @p src).
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
@@ -34,16 +46,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-// int main()
-// {
-// 	char dest[15] = "Hello, ";
-// 	char dest2[15] = "Hello, ";
-// 	char src[6] = "World";
-// 	char src2[6] = "World";
-
-// 	if (ft_strlcat(dest, src,10) == strlcat(dest2, src2, 10))
-// 		printf("Fine");
-// 	else
-// 		printf("Not fine");
-// 	return 0;
-// }

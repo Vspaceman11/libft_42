@@ -6,14 +6,26 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 12:03:39 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/14 18:58:34 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:28:23 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
-
+/**
+ * @brief Locates a substring in a string within the first @p len characters.
+ *
+ * This function finds the first occurrence of the substring @p needle in the
+ * string @p haystack, within the first @p len characters. If @p needle is
+ * an empty string, the function returns @p haystack. If @p needle is not found,
+ * the function returns NULL.
+ *
+ * @param haystack The string to search within.
+ * @param needle The substring to search for.
+ * @param len The maximum number of characters to search.
+ *
+ * @return A pointer to the first occurrence of @p needle in @p haystack
+ * 			within the first @p len characters, or NULL if not found.
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -39,10 +51,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-// int	main(void)
-// {
-// 	char *str = "Never gonna give you upddd";
-// 	char *to_find = "nay";
-// 	printf("%s\n", ft_strnstr(str, to_find, 23));
-// 	printf("%s\n", strnstr(str, to_find, 23));
-// }

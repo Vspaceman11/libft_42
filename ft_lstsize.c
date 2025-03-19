@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 16:47:10 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/18 17:25:53 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:58:00 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-// int main()
-// {
-// 	t_list *list = ft_lstnew("First element");
-// 	ft_lstadd_back(&list, ft_lstnew("Second element"));
-// 	ft_lstadd_back(&list, ft_lstnew("Third element"));
-
-// 	printf("List size: %d\n", ft_lstsize(list));  // "List size: 3"
-
-// 	return 0;
-// }

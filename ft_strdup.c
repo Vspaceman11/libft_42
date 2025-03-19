@@ -6,13 +6,23 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:32:22 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/13 15:53:28 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:22:49 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
+/**
+ * @brief Duplicates the string @p s1.
+ *
+ * This function allocates memory for a new string and copies the contents
+ * of string @p s1 into the newly allocated memory. The new string is
+ * null-terminated.
+ *
+ * @param s1 The string to duplicate.
+ *
+ * @return A pointer to the newly allocated string, or NULL if memory
+ *			allocation fails.
+ */
 char	*ft_strdup(const char *s1)
 {
 	int		s1_len;
@@ -32,7 +42,3 @@ char	*ft_strdup(const char *s1)
 	new_str[i] = '\0';
 	return (new_str);
 }
-// int		main(void)
-// {
-// 	printf("%s", ft_strdup("Copied string"));
-// }

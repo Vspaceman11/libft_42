@@ -6,13 +6,28 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:50:57 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/14 17:10:30 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:31:10 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
+/**
+ * @brief Extracts a substring from a given string starting at index @p start
+ * 			and with a maximum length of @p len.
+ *
+ * This function allocates memory for and returns a new substring, which is
+ * a part of the string @p s, starting from index @p start and up to @p len
+ * characters long. If @p start is beyond the end of the string, an empty
+ * string is returned. If @p len exceeds the length of the string, it is
+ * adjusted to fit.
+ *
+ * @param s The string to extract the substring from.
+ * @param start The starting index of the substring.
+ * @param len The maximum length of the substring.
+ *
+ * @return A new string containing the extracted substring, or NULL if
+ * 			allocation fails or @p s is NULL.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
@@ -39,22 +54,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	result_str[i] = '\0';
 	return (result_str);
 }
-// int main()
-// {
-// 	char *s = "Hello, world!";
-
-// 	char *sub1 = ft_substr(s, 7, 5);
-// 	printf("Substring 1: %s\n", sub1); // Output: "world"
-
-// 	char *sub2 = ft_substr(s, 0, 5);
-// 	printf("Substring 2: %s\n", sub2); // Output: "Hello"
-
-// 	char *sub3 = ft_substr(s, 20, 5);
-// 	printf("Substring 3: %s\n", sub3); // Output: ""
-
-// 	free(sub1);
-// 	free(sub3);
-// 	free(sub2);
-
-// 	return 0;
-// }

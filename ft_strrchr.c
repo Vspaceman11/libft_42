@@ -6,14 +6,24 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:42:40 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/11 17:55:02 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:30:23 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-// Comparing each letter in the string with c and setting it to variable last
-// Checking if c is a terminator then return pointer to the end of the string
+/**
+ * @brief Locates the last occurrence of the character @p c in the string @p s.
+ *
+ * This function searches for the last occurrence of the character @p c in
+ * the string @p s. If the character is found, a pointer to its last
+ * occurrence is returned.If the character is not found,
+ * the function returns NULL.
+ *
+ * @param s The string to search in.
+ * @param c The character to search for.
+ *
+ * @return A pointer to the last occurrence of @p c in @p s, or NULL if
+ * 			@p c is not found.
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
@@ -29,9 +39,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (last);
 }
-// int	main()
-// {
-// 	printf("%s\n", ft_strrchr("Hello, World", 'o'));
-// 	printf("%s\n", strrchr("Hello, World", 'o'));
-// 	return (0);
-// }

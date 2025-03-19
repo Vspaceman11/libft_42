@@ -6,13 +6,22 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 15:18:26 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/18 16:28:37 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:57:48 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
+/**
+ * @brief Creates a new list element.
+ *
+ * This function allocates memory for a new list element, initializes its
+ * content with the provided value, and sets its next pointer to NULL.
+ *
+ * @param content The content to assign to the new list element.
+ *
+ * @return A pointer to the newly created list element. Returns NULL if
+ *         memory allocation fails.
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_list;
@@ -24,21 +33,3 @@ t_list	*ft_lstnew(void *content)
 	new_list->next = NULL;
 	return (new_list);
 }
-
-// int main(void)
-// {
-//     int value = 12345;
-//     t_list *node = ft_lstnew(&value);
-
-//     if (!node)
-//     {
-//         printf("Error: ft_lstnew return NULL\n");
-//         return (1);
-//     }
-//     printf("Node created!\n");
-//     printf("Content: %d\n", *(int *)(node->content));
-//     printf("Next node: %p\n", (void *)node->next);
-
-//     free(node);
-//     return (0);
-// }

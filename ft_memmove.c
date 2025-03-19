@@ -6,14 +6,29 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 13:34:05 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/13 14:34:04 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:05:04 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
 
+/**
+ * @brief Moves memory area from source to destination.
+ *
+ * This function copies @p len bytes from the memory area pointed to by @p src
+ * to the memory area pointed to by @p dst, handling overlapping memory regions
+ * correctly. If the memory areas overlap, it copies the data in a safe manner
+ * by first checking the relative positions of the source and destination.
+ * If either @p dst or @p src is NULL, the function returns NULL.
+ *
+ * @param dst Pointer to the destination memory area where the content is
+ * copied.
+ * @param src Pointer to the source memory area from which the content is
+ * copied.
+ * @param len The number of bytes to move.
+ *
+ * @return A pointer to the destination memory area @p dst.
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t				i;
@@ -42,17 +57,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-// int main()
-// {
-// 	char str1[20] = "HelloWorld";
-// 	char str2[20] = "HelloWorld";
-
-// 	// My ft_memmove
-// 	ft_memmove(str2 + 2, str2, 5);
-// 	printf("My ft_memmove: %s\n", str2); // "HeHelloorld"
-
-// 	// Original memmove
-// 	memmove(str1 + 2, str1, 5);
-// 	printf("Original memmove: %s\n", str1); // "HeHelloorld"
-// 	return 0;
-// }

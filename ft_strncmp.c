@@ -6,13 +6,27 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 17:08:53 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/12 17:07:46 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:27:39 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
+/**
+ * @brief Compares the first @p n characters of two strings.
+ *
+ * This function compares the first @p n characters of two strings, @p s1 and
+ * @p s2. It returns a value less than, equal to, or greater than zero if
+ * @p s1 is found to be lexicographically less than, equal to, or greater
+ * than @p s2, respectively.
+ *
+ * @param s1 The first string to compare.
+ * @param s2 The second string to compare.
+ * @param n The number of characters to compare.
+ *
+ * @return An integer less than, equal to, or greater than zero if the first
+ * 			@p n characters of @p s1 are found, respectively, to be less than,
+ * 			to match, or be greater than the first @p n characters of @p s2.
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -30,9 +44,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-// int main(void)
-// {
-// 	printf("%d\n", ft_strncmp("a", "A", 0));
-// 	printf("%d", strncmp("a", "A", 0));
-// 	return 0;
-// }

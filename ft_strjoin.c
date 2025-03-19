@@ -6,13 +6,24 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 14:26:25 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/14 15:46:11 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:24:17 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
+/**
+ * @brief Joins two strings into a newly allocated string.
+ *
+ * This function allocates memory and joins two strings, @p s1 and @p s2,
+ * into a single new string. The contents of @p s1 are followed by the
+ * contents of @p s2. The resulting string is null-terminated.
+ *
+ * @param s1 The first string to join.
+ * @param s2 The second string to join.
+ *
+ * @return A pointer to the newly allocated string containing the concatenation
+ * 			of @p s1 and @p s2, or NULL if memory allocation fails.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
@@ -40,8 +51,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result_str[i] = '\0';
 	return (result_str);
 }
-// int	main()
-// {
-// 	printf("%s", ft_strjoin("Hello, ", "World"));
-// 	return 0;
-// }
