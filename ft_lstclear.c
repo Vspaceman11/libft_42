@@ -6,7 +6,7 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 13:36:34 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/19 14:00:46 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:37:51 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (*lst)
 	{
 		tmp_lst = (*lst)->next;
-		ft_lstdelone(*lst, del);
+		del((*lst)->content);
+		free(*lst);
 		*lst = tmp_lst;
 	}
 	*lst = NULL;
