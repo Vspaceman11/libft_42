@@ -6,13 +6,16 @@
 #    By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/11 14:13:04 by vpushkar          #+#    #+#              #
-#    Updated: 2025/03/19 15:19:01 by vpushkar         ###   ########.fr        #
+#    Updated: 2025/03/24 14:16:03 by vpushkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-CFLAGS = -Werror -Wall -Wextra -g
+CFLAGS = -Wall -Wextra -Werror -g
+SRC_DIR = src
+OBJ_DIR = obj
+INC_DIR = inc
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
 	ft_strlcat.c ft_strlcpy.c ft_strdup.c ft_memcmp.c ft_memchr.c \
@@ -23,16 +26,22 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 B_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 	ft_lstmap.c
-OBJ = $(SRC:.c=.o)
-B_OBJ = $(B_SRC:.c=.o)
-INC = libft.h
+SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
+B_SRCS = $(addprefix $(SRC_DIR)/, $(B_SRC))
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+B_OBJ = $(addprefix $(OBJ_DIR)/, $(B_SRC:.c=.o))
+INC = $(INC_DIR)/libft.h
 RM = rm -f
 
-#Compile object files
-.c.o:
-	$(CC) $(CFLAGS) -I $(INC) -c $< -o $@
+# Create object directory if not exists
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
-#Creat static library
+# Compile object files
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
+
+# Create static library
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
@@ -44,6 +53,7 @@ all: $(NAME)
 
 clean:
 	$(RM) $(OBJ) $(B_OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
