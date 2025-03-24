@@ -1,0 +1,57 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.save
+
+# IDE and editor files
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-*
+
+# Build directories
+build/
+dist/
+*.egg-info/
+node_modules/
+
+# Temporary files created by tools
+*.lock
+*.pid
+*.seed
+*.cover
+*.prof
+*.log
+*.gz
+*.bz2
+*.xz
+*.zip
+*.tar
+*.7z
+*.rar
+*.tgz
+*.txz
+*.lzma
+*.zst
