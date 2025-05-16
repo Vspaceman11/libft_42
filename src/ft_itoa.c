@@ -6,13 +6,14 @@
 /*   By: vpushkar <vpushkar@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 16:44:32 by vpushkar          #+#    #+#             */
-/*   Updated: 2025/03/19 16:56:36 by vpushkar         ###   ########.fr       */
+/*   Updated: 2025/05/16 15:49:41 by vpushkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	len_count(int n);
+
 /**
  * @brief Converts an integer to a string.
  *
@@ -27,7 +28,6 @@ static int	len_count(int n);
  *  containing the integer representation.
  *			Returns NULL if memory allocation fails.
  */
-
 char	*ft_itoa(int n)
 {
 	char	*result_str;
